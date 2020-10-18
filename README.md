@@ -1,5 +1,19 @@
 # Energium AI Competition at UCSD
 
+## My Strategy
+
+The life time of a collector is as follows:
+1. Spawn collector
+2. For the first 20 turns, move randomly (as long as it's not out of bounds)
+3. For all moves after this:
+    1. Get the tiles to the North, South, East, and West
+    2. Find out which of these tiles has the most energium, and set that as the destination
+    3. If the destination is a downgrade(and our current position is not the base), do not move.
+    4. Otherwise, move to the destination.
+4. If the bot has less than 20% life left, it makes its way back to the base to be repaired before repeating the steps above (moving randomly and then finding maxes).
+
+## The Original README
+
 Upon the dawn of the new millennium, energy has become currency, the most precious resource after majority of Earth's resources have been mined out. You are an energy corporation with the technology of **Collectors**, robots that can mine a energy rich resource known as energium on the asteroid belts of our solar system.
 
 <img src="/workers.png" width=200>
